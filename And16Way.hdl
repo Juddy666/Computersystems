@@ -10,5 +10,22 @@ CHIP And16Way {
     OUT out;
 
     PARTS:
-    
+    And(a=in[0], b=in[1], out=outa1);
+	And(a=in[2], b=in[3], out=outa2);
+	And(a=in[4], b=in[5], out=outa3);
+	And(a=in[6], b=in[7], out=outa4);
+	And(a=in[8], b=in[9], out=outa5);
+	And(a=in[10], b=in[11], out=outa6);
+	And(a=in[12], b=in[13], out=outa7);
+	And(a=in[14], b=in[15], out=outa8);
+
+	And(a=outa1, b=outa2, out=outb1);
+	And(a=outa3, b=outa4, out=outb2);
+	And(a=outa5, b=outa6, out=outb3);
+	And(a=outa7, b=outa8, out=outb4);
+	
+	And(a=outb1, b=outb2, out=outc1);
+	And(a=outb3, b=outb4, out=outc2);
+	
+	And(a=outc1, b=outc2, out=out);
 }
